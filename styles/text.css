@@ -1,0 +1,39 @@
+p{
+    font-family: "Comic Relief", sans-serif;
+  }
+  .Title{
+    font-weight: bolder;
+    font-style: italic;
+    margin-bottom:0px;
+  }
+
+  .views{
+    color:rgb(69, 63, 63);
+    font-size: 14px;
+    margin-top:15px;
+    margin-bottom:0px;
+  }
+
+  .rot{
+    color:grey;
+    font-size: 14px;
+    margin-top:15px;
+    margin-bottom:0px;
+    width: 200px;
+  }
+
+  .more{
+    background-color: palevioletred;
+    color: black;
+    margin-top: 50px;
+    font-size: 10px;
+    padding-left:3px;
+    padding-top:13px;
+    padding-bottom:13px;
+    text-align: center;
+  }
+
+  .hell:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
