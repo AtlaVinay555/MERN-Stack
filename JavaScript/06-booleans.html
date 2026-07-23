@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <script>
+      const age = 18;
+      console.log(3 < 5 - 5); //true as priority of booleans < math
+      console.log(3 > 5);
+      console.log(typeof 'true');
+      console.log(typeof true);
+      console.log(5 == '5'); //gives true as JS converts '5' to 5
+      console.log(5 === '5'); //false as just checking so we use this only (same for !== and !=)
+
+      if(true){
+        console.log('Run if Statement.');
+      }
+      else{
+        console.log('Run else Statement.');
+      }
+
+      if(age > 18){
+        console.log('Can drive!');
+      }
+      else if(age = 18){ //use for multiple lines in if/else if/else
+        console.log('Get ur goddamn license!');
+      }
+      else{
+        console.log('Can\'t drive!');
+      }
+
+      if(5 || !0){
+        console.log('Truthy!');
+      }
+      else if(false || 0 || null || '' || NaN || undefined){
+        console.log('falsy');
+      }
+
+      console.log('woods'/5); //NaN
+
+      let variable1; //undefined
+      const variable2 = undefined; //also undefined
+
+      const message = false && console.log("This is short-circuit evaluation."); //Guard Operator
+
+      console.log(message);
+
+      const currency = undefined || 'USD';
+      console.log(currency); //Default Operator
+
+      
+
+    </script>
+  </body>
+</html>
