@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <script>
+      const characters = {
+        name: 'Nakamura',
+        age: 17,
+        ['Evil'] : 'Yes', //we can remove [] for strings
+        scores : {
+          maths: 53,
+          japanese: 67
+        },
+        
+        fun: function message(){
+          console.log("All the townsmen are shitbugs!")
+        } //This is called a method in an object
+      };
+
+      console.log(typeof characters);
+      console.log(characters);
+      console.log(characters.name);
+      characters.name = 'Kasuga';
+      characters.gender = 'Male';
+      delete characters.gender;
+      console.log(characters);
+      console.log(characters['Adolscence-or-not']); //JS thinks this as minus (-) if done with dot notation
+
+      characters.fun();
+      console.log(typeof console);
+      console.log(typeof console.log); //obj+function = method
+
+      //JSON is JS Obj but with less features (no functions) but universally understood by all Computers
+
+      const jsonString = JSON.stringify(characters); //JS Obj -> JSON
+      console.log(jsonString);
+      console.log(JSON.parse(characters));  //JSON -> JS Obj
+
+      //Local storage stores Variables permanently even after refresh and page restart
+
+      console.log('hello'.length());
+      console.log('hello'.toUpperCase());
+
+      const obj1 = {
+        message: 'hello'
+      };
+
+      const obj2 = obj1; //same reference as obj 1 not a copy
+
+      obj1.message = 'Good Job!';
+      console.log(obj1);
+      console.log(obj2);
+
+      const obj3 = {
+        message: 'hello'
+      };
+
+      console.log(obj3 === obj1); //false as a copy
+      console.log(obj2 === obj1); //true as a reference
+
+      const obj4 = {
+        message: 'hello',
+        price: 799
+      };
+
+      // const message = obj4.message; OR
+      const { message , price } = obj4; //Destructuring: as same name as variable and obj var
+
+      console.log(message);
+      console.log(price);
+
+      const obj5 = {
+        // message : message (Variable used in obj)
+        message, //shorthand property
+
+        /* method: function function1(){
+          console.log('Method');
+        } */
+
+        method() {
+          console.log('Method'); //same as above
+        }
+      };
+
+      console.log(obj5);
+
+      obj5.method();
+      
+    </script>
+  </body>
+</html>

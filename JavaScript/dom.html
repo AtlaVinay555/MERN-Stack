@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM's</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <button>Hello</button> <!--Element-->
+
+    <button class = "js-new">Another Hello</button>
+    <script>
+      console.log(document.title);
+      document.title = 'Changed Title';
+      
+      console.log(document.body); //gets whole body
+      console.log(typeof document.body);// HTML (in JS) -> JS Obj 
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = '<button>Good Job!</button>' //change HTML
+
+      console.log(document.querySelector('button').innerHTML); //get any element from page and keep it in JS
+
+      document.querySelector('button')
+        .innerHTML = 'Changed Button';
+
+      document.querySelector('.js-new');
+
+      const Element = document.querySelector('.js-new');
+
+      console.log(Element);
+
+    </script>
+  </body>
+</html>
