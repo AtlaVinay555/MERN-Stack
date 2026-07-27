@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="10 - rpscss.css">
+  </head>
+  <body>
+    <p class = "title">
+      rock paper scissors!
+    </p>
+    <button class = "move-button" onclick = "
+    playGame('rock');
+    ">
+    <img src = "rock-emoji.png" class = "move-icon" >
+    </button>
+    <button class = "move-button" onclick = "
+    playGame('paper');
+    ">
+    <img src = "paper-emoji.png" class = "move-icon" >
+    </button>
+    <button class = "move-button" onclick = "
+    playGame('scissors');
+    ">
+    <img src = "scissors-emoji.png" class = "move-icon" >
+    </button>
+
+    <p class = 'js-result result'></p>
+    <p class = 'js-moves'>
+      You
+      <img src = "rock-emoji.png" class = "move-icon">
+      <img src = "scissors-emoji.png" class = "move-icon">
+      Computer
+    </p>
+    <p class = 'js-score score'></p>
+
+    <button class = "reset" onclick = "score.wins = 0;score.losses = 0;score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    ">
+      Reset Button
+    </button>
+    <script src="10-rpscss.js">
+    </script>
+  </body>
+</html>
