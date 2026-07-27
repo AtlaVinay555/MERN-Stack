@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM's Project in CSS</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .js-SubElement{
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: red;
+        color: whitesmoke;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-Subscribed{
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: rgb(194, 183, 183);
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .cost-input{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .calculate-button{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: rgb(54, 222, 54);
+        border: none;
+        border-radius: 5px;
+        font-weight: bolder;
+        transition: background-color 0.15s,
+        padding 0.15s;
+      }
+      .calculate-button:active{
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgb(185, 175, 175);
+        border: none;
+        border-radius: 5px;
+        font-weight: bolder;
+
+      }
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick = "
+    Subscribe();
+    "
+    class = 'js-SubElement'>Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under 40$ -> +10$ Charges.</p>
+    <p>Orders over 40$ -> NO CHARGES. (FREE!).</p>
+    <input placeholder = "Cost of order" class = 'js-input-cost cost-input' onkeydown="handleCostKeyDown(event); 
+    ">
+    <button class = "calculate-button" onclick = "
+    calculateCost();
+    ">Calculate</button>
+    <p class = "js-total-cost"></p>
+
+    <script>
+
+      String(25); //Number to String
+      console.log('25' - 5); //Type Coersion - JS converts '25' to number and calculates it (for -,*,/)
+
+      window.document;
+      window.console.log('Window'); //No need to add window as JS does
+      window.alert;
+
+      function handleCostKeyDown(event){
+        if(event.key === 'Enter'){
+          calculateCost();
+    }
+      }
+      function calculateCost(){
+        const inputElement = document.querySelector('.js-input-cost');
+
+        let cost = Number(inputElement.value); //String to Number
+
+        if(cost < 40){
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+      }
+
+
+      function Subscribe(){
+        const buttonElement = document.querySelector('.js-SubElement');
+        console.log(document.querySelector('.js-SubElement'));
+        if(buttonElement.innerHTML === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-Subscribed');
+        }
+        else{
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-Subscribed');
+        }
+      }
+    </script>
+  </body>
+</html>
