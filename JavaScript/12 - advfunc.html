@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <button class = "button">
+    Click
+  </button>
+  <script>
+    const buttonElement = document.querySelector('.button');
+
+    const eventListener = () =>{
+      console.log('click');
+    }
+
+    buttonElement.addEventListener('click',eventListener);
+    buttonElement.removeEventListener('click',eventListener);
+
+    buttonElement.addEventListener('click',() => {
+      console.log('Another click');
+    }); //can also use keydown  
+
+    //closure in functions - scopes params to function itself
+
+    // querySelectorAll -> gives all elements on page with same name
+
+    // filter() -> same as forEach but return true/false and filters
+    // map() -> same as forEach but return modified array and returns
+
+
+    /*
+    normal_greet(); //hoising - calling function any order
+    function normal_greet(){
+      console.log('Hello!');
+    }
+    const func = function greet(){ //function in variable
+      console.log('Hello!');
+    }
+    const anonymous_function = function(){ //function in variable
+      console.log('Hello!');
+    }
+
+    console.log(func);
+    console.log(typeof func); //function type
+
+    const object = {
+      num : 2,
+      fun: function(){ //anonymus
+        console.log('Greeting!'); //as functions are values
+      }
+    };
+
+    object.fun();  // () needed for function to work in obj
+
+    // Method:- Function inside an object (log in console.log)
+
+    function run(param){
+      param();
+    }
+    run(function(){
+      console.log("Running Param..."); //this is called callback func.
+    }); //passing a function into a function
+    
+
+    setTimeout(function(){ //async code - computer won't wait for this line and go to next line
+      console.log("Timeout!"); //this is sync code btw (one after another)
+      console.log("Timeout Again!");
+    }, 3000); //1 sec = 1000 ms (here, 3 sec)
+
+    setInterval(function(){
+      console.log('Interval');
+    } , 3000);  
+
+
+    [
+      1000,
+      2000,
+      3000
+    ].forEach(function(value,index){
+      console.log(value);
+      console.log(index);
+    });
+
+    //return instead of continue and no break in for loop
+
+    const arrowFunc = (param1,param2) => {
+      console.log("Hellowwww");
+      return 5;
+    };
+    arrowFunc();
+
+    //for one param and one line optional to use () and {}
+
+    const obj = {
+      //method: () => {
+
+      //}
+      method (){
+
+      } //called a shorthand method and better than arrow func
+    };
+
+    */
+
+
+
+  </script>
+</body>
+</html>
